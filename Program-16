@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+	class alphabet
+	{    
+		public:
+			char a,b;
+			void letter(char x, char y)
+			{
+				a=x;
+				b=y;
+			
+			}
+			alphabet operator+()
+			{
+				alphabet object;
+				object.a=(int) a+1;
+				object.b=(int) b+1;
+				return(object);
+				
+			}
+			void display()
+			{
+				   cout<<"alphabet after increment is:"<<a<<endl;
+				   cout<<"alphabet after increment is:"<<b;
+			}
+	};
+
+int main()
+{
+	alphabet object1;
+	char x,y;
+	cout<<"enter the first alphabet:-";
+	cin>>x;
+	cout<<"enter the second alphabet:-";
+	cin>>y;
+	object1.letter(x,y);
+	alphabet obj2=(+object1);
+	obj2.display();
+	return 0;
+}
