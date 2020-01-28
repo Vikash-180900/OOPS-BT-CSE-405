@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+class test
+{
+	int n1,n2;
+	string first_name,last_name;
+	public:
+		test()
+		{
+			n1=2;
+			n2=3;
+		}
+		test(int n)
+		{
+			n1=n;
+		}
+		test(int n,int x)
+		{
+			n1=n;
+			n2=x;
+		}
+		void display()
+		{
+			cout<<"value of variable n1 is:"<<n1<<endl;
+			cout<<"value of variable n2 is:"<<n2<<endl;
+		}
+};
+class name
+{
+	string first_name,last_name;
+	public:
+		name(string x, string y)
+		{
+			first_name=x;
+			last_name=y;
+		}
+		name(name &obj)
+		{
+			first_name=obj.first_name;
+			last_name=obj.last_name;
+		}
+		void display()
+		{
+			cout<<"first name:"<<first_name<<endl;
+			cout<<"lat name:"<<last_name<<endl;
+		}
+};
+int main()
+{
+	int n,x;
+	test object;
+	cout<<"DEFAULT CONSTRUCTOR"<<endl;
+	object.display();
+	cout<<"ONE PARAMETER "<<endl;
+	cout<<"enter the integer value:";
+	cin>>n;
+	test object1(n);
+	object1.display();
+	cout<<"CONSTRUCTOR OVERLOADING "<<endl;
+	cout<<"enter two values:"<<endl;
+	cin>>n>>x;
+	test object2(n,x);
+	object2.display();
+	string p,q;
+	cout<<"COPY CONSTRUCTOR USING STRING"<<endl;
+	cout<<"enter the name:";
+	cin>>p>>q;
+	name obje(p,q);
+	name obje1(obje);
+	obje1.display();
+	return 0;
+	
+}
