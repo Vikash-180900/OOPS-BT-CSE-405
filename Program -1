@@ -1,3 +1,4 @@
+/* Program to read and display a matrix witn size m*n*/  
 #include<iostream>
 
 #include<conio.h>
