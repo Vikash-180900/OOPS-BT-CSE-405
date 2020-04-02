@@ -1,0 +1,33 @@
+// program to add two numbers
+
+#include <iostream>
+using namespace std;
+class add
+{
+    int x,y;
+public:
+    int number()
+    {
+        cout<<"enter the values of x and y"<<endl;
+        cin>>x>>y;
+    }
+   int sum(int x,int y)
+    {
+
+    int result (x+y);
+
+    }
+    void display()
+    {
+        cout<<"sum is:"<<x+y<<endl;
+    }
+};
+int main()
+{
+    add s;
+    int x,y;
+    s.number();
+    s.sum(x,y);
+    s.display();
+    return 0;
+}
