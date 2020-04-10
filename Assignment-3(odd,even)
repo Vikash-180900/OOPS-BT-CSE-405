@@ -5,32 +5,28 @@ class number
 {
     int x,result;
 public:
-    int num(int x);
-    int display(int result);
+    int check(int x);
     };
-    int number:: num(int x)
-    {
-        int result= x%2;
-    }
-        int number::display(int result)
+
+        int number::check(int x)
         {
 
-        if(result==0)
-        {
+        if(x%2==0)
 
             cout<<"even";
-        }
+
         else
-            cout<<"odd";
-    }
+
+         cout<<"odd";
+         }
 
 int main()
 {
-    int x,result;
+    int x;
     number s;
     cout<<"enter the value of x"<<endl;
     cin>>x;
-    s.num(x);
-    s.display(result);
+    s.check(x);
     return 0;
 }
+
