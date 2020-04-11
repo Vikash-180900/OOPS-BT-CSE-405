@@ -1,0 +1,32 @@
+//program to display the elements of array
+#include <iostream>
+using namespace std;
+class ARR
+{
+protected:
+      int a[100],i,s;
+public:
+    int getdata();
+    int display();
+};
+int ARR::getdata()
+{
+     cout<<"enter the size of array"<<endl;
+     cin>>s;
+     cout<<"enter the elements of array"<<endl;
+     for(i=0;i<=s;i++)
+       cin>>a[i];
+}
+int ARR::display()
+{
+    cout<<"elements of array are:"<<endl;
+    for(i=0;i<=s;i++)
+        cout<<""<<a[i]<<endl;
+}
+int main()
+{
+    ARR x;
+    x.getdata();
+    x.display();
+    return 0;
+}
