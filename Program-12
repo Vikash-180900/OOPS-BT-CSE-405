@@ -1,0 +1,39 @@
+//program for multiple inheritance
+#include <iostream>
+using namespace std;
+class A
+{
+public:
+    float salary;
+    void get_salary()
+    {
+        cout<<"salary is :-"<<endl;
+        cin>>salary;
+    }
+};
+class B
+{
+public:
+    float bonus;
+    void get_bonus()
+    {
+        cout<<"bonus is :-"<<endl;
+        cin>>bonus;
+    }
+};
+class C : public A, public B
+{
+public:
+    void total()
+    {
+        cout<<"Total Salary.....:-"<<(salary+bonus)<<endl;
+    }
+};
+int main()
+{
+    C c1;
+    c1.get_salary();
+    c1.get_bonus();
+    c1.total();
+    return 0;
+}
